@@ -1,0 +1,10 @@
+# Named files
+mappings.txt
+server_output.txt
+playground.py
+
+# Directories
+__pycache__/**
+
+# Extensions
+*.apconf
