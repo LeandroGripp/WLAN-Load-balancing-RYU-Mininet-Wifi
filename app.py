@@ -16,7 +16,7 @@ import threading
 import time
 import pickle
 
-STATION_THRESHOLD = 2
+STATION_THRESHOLD = 6
 LOAD_THRESHOLD = 10*1000*1000 # 10Mbytes
 SIGNAL_THRESHOLD = -90 # dBm
 
@@ -159,6 +159,7 @@ class SimpleSwitch13(app_manager.RyuApp):
                                     command=dp.ofproto.OFPFC_DELETE,
                                     out_port=dp.ofproto.OFPP_ANY, out_group=dp.ofproto.OFPG_ANY,
                                     priority=1, match=match)
+            print(f'Deleting flows with ip {ip} as destination')
             dp.send_msg(mod)
 
             # IP as source
@@ -168,6 +169,7 @@ class SimpleSwitch13(app_manager.RyuApp):
                                     out_port=dp.ofproto.OFPP_ANY, out_group=dp.ofproto.OFPG_ANY,
                                     priority=1, match=match)
             dp.send_msg(mod)
+            print(f'Deleting flows with ip {ip} as source')
 
             # MAC as destination
             match = parser.OFPMatch(eth_dst=mac)
@@ -177,6 +179,7 @@ class SimpleSwitch13(app_manager.RyuApp):
                                     priority=1, match=match)
             
             dp.send_msg(mod)
+            print(f'Deleting flows with mac {mac} as destination')
 
             # MAC as source
             match = parser.OFPMatch(eth_src=mac)
@@ -184,6 +187,8 @@ class SimpleSwitch13(app_manager.RyuApp):
                                     command=dp.ofproto.OFPFC_DELETE,
                                     out_port=dp.ofproto.OFPP_ANY, out_group=dp.ofproto.OFPG_ANY,
                                     priority=1, match=match)
+            dp.send_msg(mod)
+            print(f'Deleting flows with mac {mac} as source')
 
     @set_ev_cls(ofp_event.EventOFPPacketIn, MAIN_DISPATCHER)
     def _packet_in_handler(self, ev):

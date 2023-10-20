@@ -23,7 +23,8 @@ import time
 import pickle
 
 #APs
-aps = ['ap1', 'ap2']
+# aps = ['ap1', 'ap2']
+aps = ['ap1', 'ap2', 'ap3', 'ap4']
 # stations = ['sta1', 'sta2', 'sta3', 'sta4', 'sta5', 'sta6', 'sta7', 'sta8']
 stations_mapping = {}
 stations_aps = {}
@@ -74,7 +75,6 @@ def get_stations(output):
     result = output.split("\n")
     curr_station = ""
     for data in result:
-        #print(data)
         if "Station" in data:
             station = data.split(' ')[1]
             curr_station = station
@@ -86,7 +86,6 @@ def get_stations(output):
             tx_bytes = data.split('\t')[2]
             stations[curr_station]["tx_bytes"] = tx_bytes
     return stations
-
 
 def get_signal_strengths(output):
     signal_strengths = {}
@@ -107,57 +106,6 @@ def get_connected_interface(output):
         return 'wlan0'
     else:
         return 'wlan1'
-
-# parse 
-def get_rxbytes(output):
-    rxbytes = []
-    result = output.split("\n")
-    for data in result:
-        if "rx bytes" in data:
-            station = data.split('\t')[2]
-            rxbytes.append(int(station))
-    return rxbytes
-
-# parse stations 
-def get_txbytes(output):
-    txbytes = []
-    result = output.split("\n")
-    for data in result:
-        if "tx bytes" in data:
-            station = data.split('\t')[2]
-            txbytes.append(int(station))
-    return txbytes
-
-# parse rssi 
-def get_rssi(output):
-    rssi = []
-    ssid = []
-    result = output.split("\n")
-    for data in result:
-        if "signal" in data:
-            signal = data.split(' ')[1]
-            rssi.append(signal)
-        
-
-
-
-    return txbytes
-
-
-
-def measures_station_metrics():
-    pass
-    report = []    
-    for station in stations:
-        result = {}
-        result["name"] = station
-        #sta1 iw dev sta1-wlan0 scan
-        ssifname = station + "-wlan1"
-        cmd = [station, 'iw', 'dev', ssifname, 'scan']
-        output = run_cmd(cmd)
-        print(get_rssi(output))
-
-
 
 def measures_ap_metrics():
     dpid = 1
@@ -199,9 +147,6 @@ def measures_ap_metrics():
             result['stations_associated'][station_name]['rx_rate'] = rx_bw*8/1000000 #convert to Mbps
             result['stations_associated'][station_name]['tx_rate'] = tx_bw*8/1000000 #convert to Mbps
 
-        result["tx_bytes"] = 0 #get_txbytes(str(output))
-        result["rx_bytes"] = 0 #get_rxbytes(str(output))
-
         report.append(result)
         dpid +=1
 
@@ -229,25 +174,13 @@ class StationMetrics(threading.Thread):
         ssifname = station_name + "-wlan0"
         cmd = ['./m', station_name, 'iw', 'dev', ssifname, 'scan']
         output = run_cmd(cmd)
-        # print(output)
         stations_aps[station_name] = {
             'aps': get_signal_strengths(str(output)),
-            # 'connected_interface': get_connected_interface(str(output))
         }
         exit(1)
         
     def run(self):
         self.get_ap_strengths(self.station_name)
-        # time.sleep(10)
-        
-
-# class SingleStationMetrics(threading.Thread):
-#     def __init__(self, station_name):
-#         threading.Thread.__init__(self)
-        
-#     def run(self):
-#         measures_station_metrics()
-#         time.sleep(10)
 
 class Sender(threading.Thread):
     def __init__(self):
@@ -287,13 +220,9 @@ class Listener(threading.Thread):
         #data['station_name'] = "sta1"
         #data['ssid'] = "ssid_ap2"
         #data['interface'] = "wlan1"
-        #./m sta1 iw dev sta1-wlan1 connect ssid-ap2
         #./m sta1 iw dev sta1-wlan0 disconnect
+        #./m sta1 iw dev sta1-wlan1 connect ssid-ap2
 
-        # prev_interface = 'wlan0' if data['interface'] == 'wlan1' else 'wlan1'
-
-        # prev_ifname = data['station_name'] + "-" + prev_interface
-        # ifname = data['station_name'] + "-" + data['interface']
         ifname = data['station_name'] + '-wlan0'
 
         cmd = ['./m', data['station_name'], 'iw', 'dev', ifname, 'disconnect']
@@ -303,10 +232,6 @@ class Listener(threading.Thread):
         cmd = ['./m', data['station_name'], 'iw', 'dev', ifname, 'connect', data['ssid']]
         print( cmd)
         print( run_cmd(cmd))
-
-        # cmd = ['./m', data['station_name'], 'iw', 'dev', prev_ifname, 'disconnect']
-        # print( cmd)
-        # print( run_cmd(cmd))
 
         print()
 
