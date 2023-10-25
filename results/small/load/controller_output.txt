@@ -1,0 +1,24 @@
+received the statistics  [{'name': 'ap1', 'dpid': 1, 'if_name': 'ap1-wlan1', 'ssid': 'ssid-ap1', 'stations_associated': {'sta1': {'aps': {'ssid-ap1': '-80.00', 'ssid-ap2': '-80.00'}, 'rx_rate': 7.308504, 'tx_rate': 0.0}, 'sta2': {'aps': {'ssid-ap1': '-64.00'}, 'rx_rate': 5.22036, 'tx_rate': 0.0}, 'sta3': {'aps': {'ssid-ap1': '-80.00'}, 'rx_rate': 6.26448, 'tx_rate': 4.8e-05}}}, {'name': 'ap2', 'dpid': 2, 'if_name': 'ap2-wlan1', 'ssid': 'ssid-ap2', 'stations_associated': {'sta4': {'aps': {'ssid-ap2': '-72.00'}, 'rx_rate': 5.22036, 'tx_rate': 0.0}}}]
+---------------------------
+Overloaded aps [{'name': 'ap1', 'dpid': 1, 'if_name': 'ap1-wlan1', 'ssid': 'ssid-ap1', 'stations_associated': {'sta1': {'aps': {'ssid-ap1': '-80.00', 'ssid-ap2': '-80.00'}, 'rx_rate': 7.308504, 'tx_rate': 0.0}, 'sta2': {'aps': {'ssid-ap1': '-64.00'}, 'rx_rate': 5.22036, 'tx_rate': 0.0}, 'sta3': {'aps': {'ssid-ap1': '-80.00'}, 'rx_rate': 6.26448, 'tx_rate': 4.8e-05}}, 'total_rx_rate': 18.793344, 'total_tx_rate': 4.8e-05}]
+---------------------------
+Underloaded aps [{'name': 'ap2', 'dpid': 2, 'if_name': 'ap2-wlan1', 'ssid': 'ssid-ap2', 'stations_associated': {'sta4': {'aps': {'ssid-ap2': '-72.00'}, 'rx_rate': 5.22036, 'tx_rate': 0.0}}, 'total_rx_rate': 5.22036, 'total_tx_rate': 0.0}]
+---------------------------
+possible handover sta1 ssid-ap2
+possible handover sta1 ssid-ap2
+station to be migrated  {'station_name': 'sta1', 'ssid': 'ssid-ap2'}
+---------------------------
+Deleting flows with ip 10.0.0.2 as destination
+Deleting flows with ip 10.0.0.2 as source
+Deleting flows with mac 00:00:00:00:00:02 as destination
+Deleting flows with mac 00:00:00:00:00:02 as source
+Deleting flows with ip 10.0.0.2 as destination
+Deleting flows with ip 10.0.0.2 as source
+Deleting flows with mac 00:00:00:00:00:02 as destination
+Deleting flows with mac 00:00:00:00:00:02 as source
+---------------------------
+received the statistics  [{'name': 'ap1', 'dpid': 1, 'if_name': 'ap1-wlan1', 'ssid': 'ssid-ap1', 'stations_associated': {'sta2': {'aps': {'ssid-ap1': '-64.00'}, 'rx_rate': 5.22036, 'tx_rate': 0.0}, 'sta3': {'aps': {'ssid-ap1': '-80.00'}, 'rx_rate': 6.26448, 'tx_rate': 4.8e-05}}}, {'name': 'ap2', 'dpid': 2, 'if_name': 'ap2-wlan1', 'ssid': 'ssid-ap2', 'stations_associated': {'sta4': {'aps': {'ssid-ap2': '-72.00'}, 'rx_rate': 5.22036, 'tx_rate': 0.0}, 'sta1': {'aps': {'ssid-ap1': '-80.00', 'ssid-ap2': '-80.00'}, 'rx_rate': -14.96094, 'tx_rate': -6.56e-05}}}]
+---------------------------
+Overloaded aps []
+---------------------------
+Underloaded aps [{'name': 'ap1', 'dpid': 1, 'if_name': 'ap1-wlan1', 'ssid': 'ssid-ap1', 'stations_associated': {'sta2': {'aps': {'ssid-ap1': '-64.00'}, 'rx_rate': 5.22036, 'tx_rate': 0.0}, 'sta3': {'aps': {'ssid-ap1': '-80.00'}, 'rx_rate': 6.26448, 'tx_rate': 4.8e-05}}, 'total_rx_rate': 11.48484, 'total_tx_rate': 4.8e-05}, {'name': 'ap2', 'dpid': 2, 'if_name': 'ap2-wlan1', 'ssid': 'ssid-ap2', 'stations_associated': {'sta4': {'aps': {'ssid-ap2': '-72.00'}, 'rx_rate': 5.22036, 'tx_rate': 0.0}, 'sta1': {'aps': {'ssid-ap1': '-80.00', 'ssid-ap2': '-80.00'}, 'rx_rate': -14.96094, 'tx_rate': -6.56e-05}}, 'total_rx_rate': -9.740580000000001, 'total_tx_rate': -6.56e-05}]

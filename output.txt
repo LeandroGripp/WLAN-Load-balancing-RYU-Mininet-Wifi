@@ -1,0 +1,242 @@
+exec sudo mnexec -a 33752 iperf -c 10.0.0.1 -u -p 8 -b 4.24m -t 120
+exec sudo mnexec -a 33756 iperf -c 10.0.0.1 -u -p 8 -b 1.28m -t 120
+exec sudo mnexec -a 33758 iperf -c 10.0.0.1 -u -p 8 -b 2.48m -t 120
+exec sudo mnexec -a 33750 iperf -c 10.0.0.1 -u -p 8 -b 0.67m -t 120
+exec sudo mnexec -a 33754 iperf -c 10.0.0.1 -u -p 8 -b 3.82m -t 120
+exec sudo mnexec -a 33764 iperf -c 10.0.0.1 -u -p 8 -b 3.94m -t 120
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 8
+Sending 1470 byte datagrams, IPG target: 2773.58 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 8
+Sending 1470 byte datagrams, IPG target: 9187.50 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+------------------------------------------------------------
+exec sudo mnexec -a 33772 iperf -c 10.0.0.1 -u -p 8 -b 2.16m -t 120
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 8
+Sending 1470 byte datagrams, IPG target: 4741.94 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 8
+Sending 1470 byte datagrams, IPG target: 3078.53 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+exec sudo mnexec -a 33766 iperf -c 10.0.0.1 -u -p 8 -b 0.47m -t 120
+------------------------------------------------------------
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 8
+Sending 1470 byte datagrams, IPG target: 17552.24 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+exec sudo mnexec -a 33760 iperf -c 10.0.0.1 -u -p 8 -b 2.25m -t 120
+[  1] local 10.0.0.3 port 49878 connected with 10.0.0.1 port 8
+[  1] local 10.0.0.5 port 45792 connected with 10.0.0.1 port 8
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 8
+Sending 1470 byte datagrams, IPG target: 2984.77 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+exec sudo mnexec -a 33762 iperf -c 10.0.0.1 -u -p 8 -b 3.26m -t 120
+[  1] local 10.0.0.6 port 55548 connected with 10.0.0.1 port 8
+[  1] local 10.0.0.4 port 41396 connected with 10.0.0.1 port 8
+[  1] local 10.0.0.2 port 37348 connected with 10.0.0.1 port 8
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 8
+Sending 1470 byte datagrams, IPG target: 25021.28 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 8
+Sending 1470 byte datagrams, IPG target: 5444.44 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 8
+Sending 1470 byte datagrams, IPG target: 5226.67 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+exec sudo mnexec -a 33768 iperf -c 10.0.0.1 -u -p 8 -b 0.14m -t 120
+------------------------------------------------------------
+exec sudo mnexec -a 33770 iperf -c 10.0.0.1 -u -p 8 -b 4.18m -t 120
+exec sudo mnexec -a 33776 iperf -c 10.0.0.1 -u -p 8 -b 0.01m -t 120
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 8
+Sending 1470 byte datagrams, IPG target: 3607.36 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+[  1] local 10.0.0.9 port 43380 connected with 10.0.0.1 port 8
+exec sudo mnexec -a 33774 iperf -c 10.0.0.1 -u -p 8 -b 3.81m -t 120
+[  1] local 10.0.0.13 port 36508 connected with 10.0.0.1 port 8
+[  1] local 10.0.0.10 port 54678 connected with 10.0.0.1 port 8
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 8
+Sending 1470 byte datagrams, IPG target: 2813.40 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+exec sudo mnexec -a 33780 iperf -c 10.0.0.1 -u -p 8 -b 3.61m -t 120
+[  1] local 10.0.0.7 port 49412 connected with 10.0.0.1 port 8
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 8
+Sending 1470 byte datagrams, IPG target: 84000.00 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 8
+Sending 1470 byte datagrams, IPG target: 1176000.00 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+exec sudo mnexec -a 33778 iperf -c 10.0.0.1 -u -p 8 -b 2.23m -t 120
+[  1] local 10.0.0.8 port 36172 connected with 10.0.0.1 port 8
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 8
+Sending 1470 byte datagrams, IPG target: 3086.61 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+exec sudo mnexec -a 33784 iperf -c 10.0.0.1 -u -p 8 -b 4.73m -t 120
+exec sudo mnexec -a 33782 iperf -c 10.0.0.1 -u -p 8 -b 1.14m -t 120
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 8
+Sending 1470 byte datagrams, IPG target: 3257.62 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+exec sudo mnexec -a 33788 iperf -c 10.0.0.1 -u -p 8 -b 0.15m -t 120
+------------------------------------------------------------
+exec sudo mnexec -a 33786 iperf -c 10.0.0.1 -u -p 8 -b 4.51m -t 120
+[  1] local 10.0.0.12 port 42911 connected with 10.0.0.1 port 8
+[  1] local 10.0.0.11 port 60561 connected with 10.0.0.1 port 8
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 8
+Sending 1470 byte datagrams, IPG target: 5273.54 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+[  1] local 10.0.0.15 port 39531 connected with 10.0.0.1 port 8
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 8
+Sending 1470 byte datagrams, IPG target: 2486.26 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 8
+Sending 1470 byte datagrams, IPG target: 10315.79 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+------------------------------------------------------------
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 8
+Sending 1470 byte datagrams, IPG target: 2607.54 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 8
+Sending 1470 byte datagrams, IPG target: 78400.00 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+[  1] local 10.0.0.14 port 58201 connected with 10.0.0.1 port 8
+[  1] local 10.0.0.17 port 36371 connected with 10.0.0.1 port 8
+[  1] local 10.0.0.16 port 47570 connected with 10.0.0.1 port 8
+[  1] local 10.0.0.19 port 42698 connected with 10.0.0.1 port 8
+[  1] local 10.0.0.18 port 44993 connected with 10.0.0.1 port 8
+[  1] local 10.0.0.20 port 35673 connected with 10.0.0.1 port 8
+[  1] local 10.0.0.21 port 54690 connected with 10.0.0.1 port 8
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-120.0048 sec  60.7 MBytes  4.24 Mbits/sec
+[  1] Sent 43270 datagrams
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-120.0044 sec  54.7 MBytes  3.82 Mbits/sec
+[  1] Sent 38984 datagrams
+[  1] Server Report:
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  1] 0.0000-115.4104 sec  53.6 MBytes  3.90 Mbits/sec   0.350 ms 5036/43269 (12%)
+[  1] 0.0000-115.4104 sec  41 datagrams received out-of-order
+[  1] Server Report:
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  1] 0.0000-115.6025 sec  52.5 MBytes  3.81 Mbits/sec   0.977 ms 1523/38983 (3.9%)
+[  1] 0.0000-115.6025 sec  19 datagrams received out-of-order
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-120.0164 sec  18.3 MBytes  1.28 Mbits/sec
+[  1] Sent 13066 datagrams
+[  1] Server Report:
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  1] 0.0000-115.6363 sec  17.0 MBytes  1.23 Mbits/sec   1.224 ms 933/13065 (7.1%)
+[  1] 0.0000-115.6363 sec  2 datagrams received out-of-order
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-120.0058 sec  56.4 MBytes  3.94 Mbits/sec
+[  1] Sent 40209 datagrams
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-120.0090 sec  35.5 MBytes  2.48 Mbits/sec
+[  1] Sent 25311 datagrams
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-120.0223 sec  9.59 MBytes   670 Kbits/sec
+[  1] Sent 6841 datagrams
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-120.0065 sec  30.9 MBytes  2.16 Mbits/sec
+[  1] Sent 22045 datagrams
+[  1] Server Report:
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  1] 0.0000-115.6347 sec  29.7 MBytes  2.16 Mbits/sec   0.587 ms 832/22044 (3.8%)
+[  1] 0.0000-115.6347 sec  2 datagrams received out-of-order
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-120.0096 sec  32.2 MBytes  2.25 Mbits/sec
+[  1] Sent 22964 datagrams
+[  1] Server Report:
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  1] 0.0000-115.5786 sec  46.1 MBytes  3.35 Mbits/sec   0.867 ms 7300/40208 (18%)
+[  1] 0.0000-115.5786 sec  19 datagrams received out-of-order
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-120.0062 sec  46.6 MBytes  3.26 Mbits/sec
+[  1] Sent 33270 datagrams
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-120.0056 sec  59.8 MBytes  4.18 Mbits/sec
+[  1] Sent 42658 datagrams
+[  1] Server Report:
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  1] 0.0000-115.6503 sec  31.0 MBytes  2.25 Mbits/sec   0.461 ms 868/22963 (3.8%)
+[  1] 0.0000-115.6503 sec  1 datagrams received out-of-order
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-120.0271 sec  6.73 MBytes   470 Kbits/sec
+[  1] Sent 4800 datagrams
+[  1] Server Report:
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  1] 0.0000-115.6483 sec  44.9 MBytes  3.26 Mbits/sec   0.608 ms 1243/33269 (3.7%)
+[  1] 0.0000-115.6483 sec  2 datagrams received out-of-order
+[  1] Server Report:
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  1] 0.0000-115.6554 sec  50.3 MBytes  3.65 Mbits/sec   0.568 ms 6802/42657 (16%)
+[  1] 0.0000-115.6554 sec  6 datagrams received out-of-order
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-120.0046 sec  54.5 MBytes  3.81 Mbits/sec
+[  1] Sent 38882 datagrams
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-120.0042 sec  51.6 MBytes  3.61 Mbits/sec
+[  1] Sent 36841 datagrams
+[  1] Server Report:
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  1] 0.0000-115.6571 sec  6.47 MBytes   469 Kbits/sec   0.462 ms 185/4799 (3.9%)
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-120.0101 sec  31.9 MBytes  2.23 Mbits/sec
+[  1] Sent 22760 datagrams
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-120.0043 sec  67.7 MBytes  4.73 Mbits/sec
+[  1] Sent 48270 datagrams
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-120.0042 sec  64.5 MBytes  4.51 Mbits/sec
+[  1] Sent 46025 datagrams
+[  1] Server Report:
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  1] 0.0000-115.5454 sec  57.7 MBytes  4.19 Mbits/sec   0.308 ms 4847/46024 (11%)
+[  1] 0.0000-115.5454 sec  17 datagrams received out-of-order
+[  1] Server Report:
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  1] 0.0000-115.6284 sec  65.0 MBytes  4.72 Mbits/sec   0.911 ms 1898/48269 (3.9%)
+[  1] 0.0000-115.6284 sec  28 datagrams received out-of-order
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-120.0140 sec  16.3 MBytes  1.14 Mbits/sec
+[  1] Sent 11637 datagrams
+[  1] Server Report:
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  1] 0.0000-115.7087 sec  15.7 MBytes  1.14 Mbits/sec   0.553 ms 445/11636 (3.8%)
+[  1] 0.0000-115.7087 sec  1 datagrams received out-of-order
+[  1] Server Report:
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  1] 0.0000-115.6746 sec  30.7 MBytes  2.23 Mbits/sec   0.497 ms 867/22759 (3.8%)
+[  1] 0.0000-115.6746 sec  2 datagrams received out-of-order

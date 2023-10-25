@@ -17,6 +17,7 @@ import time
 import pickle
 
 STATION_THRESHOLD = 6
+# STATION_THRESHOLD = 2
 LOAD_THRESHOLD = 10*1000*1000 # 10Mbytes
 SIGNAL_THRESHOLD = -90 # dBm
 
@@ -215,7 +216,7 @@ class SimpleSwitch13(app_manager.RyuApp):
         dpid = datapath.id
         self.mac_to_port.setdefault(dpid, {})
 
-        self.logger.info("packet in %s %s %s %s", dpid, src, dst, in_port)
+        # self.logger.info("packet in %s %s %s %s", dpid, src, dst, in_port)
 
         # learn a mac address to avoid FLOOD next time.
         self.mac_to_port[dpid][src] = in_port

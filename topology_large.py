@@ -53,13 +53,15 @@ def topology():
 
     server = net.addHost('server', mac='00:00:00:00:00:01', ip='10.0.0.1/8')
 
+    random.seed(1)
+
     f = open(mappings_file_path, "w")
     for i in range (int(N_hosts)):
         sta_x = 20 + random.randint(0, 60)
         sta_y = 20 + random.randint(0, 60)
         sta = net.addStation(hostsInfo[i].name, 
                              mac=hostsInfo[i].mac, ip=hostsInfo[i].ip,
-                             position=f'{sta_x},{sta_y},0', range=10
+                             position=f'{sta_x},{sta_y},0', range=13
                             )
         f.write(hostsInfo[i].name + " " + hostsInfo[i].mac + " " + hostsInfo[i].ip + "\n")
         hostsArray.append(sta)
@@ -73,10 +75,10 @@ def topology():
 
     info("*** Creating links\n")
     net.addLink(ap1, ap2)
-    net.addLink(ap1, ap3)
-    net.addLink(ap1, ap4)
+    # net.addLink(ap1, ap3)
+    # net.addLink(ap1, ap4)
     net.addLink(ap2, ap3)
-    net.addLink(ap2, ap4)
+    # net.addLink(ap2, ap4)
     net.addLink(ap3, ap4)
 
     net.addLink(server, ap1, cls=TCLink, bw=20)
@@ -84,14 +86,9 @@ def topology():
     net.addLink(server, ap3, cls=TCLink, bw=20)
     net.addLink(server, ap4, cls=TCLink, bw=20)
 
-    # net.addLink(hostsArray[0], ap1)
-    # net.addLink(hostsArray[1], ap1)
-    # net.addLink(hostsArray[2], ap1)
-    # net.addLink(hostsArray[3], ap2)
-
     net.plotGraph(min_x=0, max_x=100, min_y=-0, max_y=100)
 
-    net.setMobilityModel(ac_method='ssf')
+    # net.setMobilityModel(ac_method='ssf')
 
     info("*** Starting network\n")
     net.build()

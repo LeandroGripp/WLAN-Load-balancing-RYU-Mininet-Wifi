@@ -1,0 +1,21 @@
+[{'name': 'ap1', 'dpid': 1, 'if_name': 'ap1-wlan1', 'ssid': 'ssid-ap1', 'stations_associated': {'sta2': {'aps': {'ssid-ap1': '-64.00'}, 'rx_rate': 0.0, 'tx_rate': 0.0}, 'sta1': {'aps': {'ssid-ap1': '-80.00', 'ssid-ap2': '-80.00'}, 'rx_rate': 0.0, 'tx_rate': 0.0}, 'sta3': {'aps': {'ssid-ap1': '-80.00'}, 'rx_rate': 0.0, 'tx_rate': 0.0}}}, {'name': 'ap2', 'dpid': 2, 'if_name': 'ap2-wlan1', 'ssid': 'ssid-ap2', 'stations_associated': {'sta4': {'aps': {'ssid-ap2': '-72.00'}, 'rx_rate': 0.0, 'tx_rate': 0.0}}}]
+
+[{'name': 'ap1', 'dpid': 1, 'if_name': 'ap1-wlan1', 'ssid': 'ssid-ap1', 'stations_associated': {'sta2': {'aps': {'ssid-ap1': '-64.00'}, 'rx_rate': 2.850744, 'tx_rate': 4.8e-05}, 'sta1': {'aps': {'ssid-ap1': '-80.00', 'ssid-ap2': '-80.00'}, 'rx_rate': 3.992736, 'tx_rate': 4.8e-05}, 'sta3': {'aps': {'ssid-ap1': '-80.00'}, 'rx_rate': 3.423576, 'tx_rate': 4.8e-05}}}, {'name': 'ap2', 'dpid': 2, 'if_name': 'ap2-wlan1', 'ssid': 'ssid-ap2', 'stations_associated': {'sta4': {'aps': {'ssid-ap2': '-72.00'}, 'rx_rate': 2.856864, 'tx_rate': 4.8e-05}}}]
+
+data received for migration  {'station_name': 'sta1', 'ssid': 'ssid-ap2'}
+['./m', 'sta1', 'iw', 'dev', 'sta1-wlan0', 'disconnect']
+exec sudo mnexec -a 12532 iw dev sta1-wlan0 disconnect
+
+['./m', 'sta1', 'iw', 'dev', 'sta1-wlan0', 'connect', 'ssid-ap2']
+exec sudo mnexec -a 12532 iw dev sta1-wlan0 connect ssid-ap2
+
+
+[{'name': 'ap1', 'dpid': 1, 'if_name': 'ap1-wlan1', 'ssid': 'ssid-ap1', 'stations_associated': {'sta2': {'aps': {'ssid-ap1': '-64.00'}, 'rx_rate': 5.216688, 'tx_rate': 0.0}, 'sta3': {'aps': {'ssid-ap1': '-80.00'}, 'rx_rate': 6.261984, 'tx_rate': 0.0}}}, {'name': 'ap2', 'dpid': 2, 'if_name': 'ap2-wlan1', 'ssid': 'ssid-ap2', 'stations_associated': {'sta4': {'aps': {'ssid-ap2': '-72.00'}, 'rx_rate': 5.219136, 'tx_rate': 0.0}, 'sta1': {'aps': {'ssid-ap1': '-80.00', 'ssid-ap2': '-80.00'}, 'rx_rate': -160.57597040000002, 'tx_rate': -0.0013327999999999999}}}]
+
+[{'name': 'ap1', 'dpid': 1, 'if_name': 'ap1-wlan1', 'ssid': 'ssid-ap1', 'stations_associated': {'sta2': {'aps': {'ssid-ap1': '-64.00'}, 'rx_rate': 5.219136, 'tx_rate': 0.0}, 'sta3': {'aps': {'ssid-ap1': '-80.00'}, 'rx_rate': 6.263256, 'tx_rate': 4.8e-05}}}, {'name': 'ap2', 'dpid': 2, 'if_name': 'ap2-wlan1', 'ssid': 'ssid-ap2', 'stations_associated': {'sta4': {'aps': {'ssid-ap2': '-72.00'}, 'rx_rate': 5.219136, 'tx_rate': 0.0}, 'sta1': {'aps': {'ssid-ap1': '-80.00', 'ssid-ap2': '-80.00'}, 'rx_rate': 7.30728, 'tx_rate': 0.0}}}]
+
+[{'name': 'ap1', 'dpid': 1, 'if_name': 'ap1-wlan1', 'ssid': 'ssid-ap1', 'stations_associated': {'sta2': {'aps': {'ssid-ap1': '-64.00'}, 'rx_rate': 5.217912, 'tx_rate': 0.0}, 'sta3': {'aps': {'ssid-ap1': '-80.00'}, 'rx_rate': 6.261984, 'tx_rate': 0.0}}}, {'name': 'ap2', 'dpid': 2, 'if_name': 'ap2-wlan1', 'ssid': 'ssid-ap2', 'stations_associated': {'sta4': {'aps': {'ssid-ap2': '-72.00'}, 'rx_rate': 5.217912, 'tx_rate': 0.0}, 'sta1': {'aps': {'ssid-ap1': '-80.00', 'ssid-ap2': '-80.00'}, 'rx_rate': 7.306056, 'tx_rate': 0.0}}}]
+
+[{'name': 'ap1', 'dpid': 1, 'if_name': 'ap1-wlan1', 'ssid': 'ssid-ap1', 'stations_associated': {'sta2': {'aps': {'ssid-ap1': '-64.00'}, 'rx_rate': 5.219136, 'tx_rate': 0.0}, 'sta3': {'aps': {'ssid-ap1': '-80.00'}, 'rx_rate': 6.264432, 'tx_rate': 0.0}}}, {'name': 'ap2', 'dpid': 2, 'if_name': 'ap2-wlan1', 'ssid': 'ssid-ap2', 'stations_associated': {'sta4': {'aps': {'ssid-ap2': '-72.00'}, 'rx_rate': 5.22036, 'tx_rate': 0.0}, 'sta1': {'aps': {'ssid-ap1': '-80.00', 'ssid-ap2': '-80.00'}, 'rx_rate': 7.306056, 'tx_rate': 0.0}}}]
+
+[{'name': 'ap1', 'dpid': 1, 'if_name': 'ap1-wlan1', 'ssid': 'ssid-ap1', 'stations_associated': {'sta2': {'aps': {'ssid-ap1': '-64.00'}, 'rx_rate': 5.219184, 'tx_rate': 4.8e-05}, 'sta3': {'aps': {'ssid-ap1': '-80.00'}, 'rx_rate': 6.261984, 'tx_rate': 0.0}}}, {'name': 'ap2', 'dpid': 2, 'if_name': 'ap2-wlan1', 'ssid': 'ssid-ap2', 'stations_associated': {'sta4': {'aps': {'ssid-ap2': '-72.00'}, 'rx_rate': 5.219184, 'tx_rate': 4.8e-05}, 'sta1': {'aps': {'ssid-ap1': '-80.00', 'ssid-ap2': '-80.00'}, 'rx_rate': 7.306056, 'tx_rate': 0.0}}}]

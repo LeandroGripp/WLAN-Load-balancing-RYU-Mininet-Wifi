@@ -1,0 +1,15 @@
+[{'name': 'ap1', 'dpid': 1, 'if_name': 'ap1-wlan1', 'ssid': 'ssid-ap1', 'stations_associated': {'sta1': {'aps': {'ssid-ap1': '-80.00', 'ssid-ap2': '-80.00'}, 'rx_rate': 5.372184, 'tx_rate': 4.8e-05}, 'sta2': {'aps': {'ssid-ap1': '-64.00'}, 'rx_rate': 3.31836, 'tx_rate': 4.8e-05}, 'sta3': {'aps': {'ssid-ap1': '-80.00'}, 'rx_rate': 4.604736, 'tx_rate': 4.8e-05}}}, {'name': 'ap2', 'dpid': 2, 'if_name': 'ap2-wlan1', 'ssid': 'ssid-ap2', 'stations_associated': {'sta4': {'aps': {'ssid-ap2': '-72.00'}, 'rx_rate': 3.301224, 'tx_rate': 4.8e-05}}}]
+
+[{'name': 'ap1', 'dpid': 1, 'if_name': 'ap1-wlan1', 'ssid': 'ssid-ap1', 'stations_associated': {'sta1': {'aps': {'ssid-ap1': '-80.00', 'ssid-ap2': '-80.00'}, 'rx_rate': 7.308504, 'tx_rate': 0.0}, 'sta2': {'aps': {'ssid-ap1': '-64.00'}, 'rx_rate': 5.22036, 'tx_rate': 0.0}, 'sta3': {'aps': {'ssid-ap1': '-80.00'}, 'rx_rate': 6.26448, 'tx_rate': 4.8e-05}}}, {'name': 'ap2', 'dpid': 2, 'if_name': 'ap2-wlan1', 'ssid': 'ssid-ap2', 'stations_associated': {'sta4': {'aps': {'ssid-ap2': '-72.00'}, 'rx_rate': 5.22036, 'tx_rate': 0.0}}}]
+
+data received for migration  {'station_name': 'sta1', 'ssid': 'ssid-ap2'}
+['./m', 'sta1', 'iw', 'dev', 'sta1-wlan0', 'disconnect']
+exec sudo mnexec -a 20497 iw dev sta1-wlan0 disconnect
+
+['./m', 'sta1', 'iw', 'dev', 'sta1-wlan0', 'connect', 'ssid-ap2']
+exec sudo mnexec -a 20497 iw dev sta1-wlan0 connect ssid-ap2
+
+
+[{'name': 'ap1', 'dpid': 1, 'if_name': 'ap1-wlan1', 'ssid': 'ssid-ap1', 'stations_associated': {'sta2': {'aps': {'ssid-ap1': '-64.00'}, 'rx_rate': 5.22036, 'tx_rate': 0.0}, 'sta3': {'aps': {'ssid-ap1': '-80.00'}, 'rx_rate': 6.26448, 'tx_rate': 4.8e-05}}}, {'name': 'ap2', 'dpid': 2, 'if_name': 'ap2-wlan1', 'ssid': 'ssid-ap2', 'stations_associated': {'sta4': {'aps': {'ssid-ap2': '-72.00'}, 'rx_rate': 5.22036, 'tx_rate': 0.0}, 'sta1': {'aps': {'ssid-ap1': '-80.00', 'ssid-ap2': '-80.00'}, 'rx_rate': -14.96094, 'tx_rate': -6.56e-05}}}]
+
+[{'name': 'ap1', 'dpid': 1, 'if_name': 'ap1-wlan1', 'ssid': 'ssid-ap1', 'stations_associated': {'sta2': {'aps': {'ssid-ap1': '-64.00'}, 'rx_rate': 5.220430400000001, 'tx_rate': 0.0}, 'sta3': {'aps': {'ssid-ap1': '-80.00'}, 'rx_rate': 6.265704, 'tx_rate': 4.8e-05}}}, {'name': 'ap2', 'dpid': 2, 'if_name': 'ap2-wlan1', 'ssid': 'ssid-ap2', 'stations_associated': {'sta4': {'aps': {'ssid-ap2': '-72.00'}, 'rx_rate': 5.221632, 'tx_rate': 4.8e-05}, 'sta1': {'aps': {'ssid-ap1': '-80.00', 'ssid-ap2': '-80.00'}, 'rx_rate': 7.308504, 'tx_rate': 0.0}}}]
