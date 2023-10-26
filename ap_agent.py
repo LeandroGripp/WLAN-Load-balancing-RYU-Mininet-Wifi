@@ -133,6 +133,11 @@ def measures_ap_metrics():
             curr_rx_bytes = stations_associated[station].get("rx_bytes", 0)
             curr_tx_bytes = stations_associated[station].get("tx_bytes", 0)
 
+            if int(curr_rx_bytes) < int(prev_rx_bytes):
+                prev_rx_bytes = 0
+            if int(curr_tx_bytes) < int(prev_tx_bytes):
+                prev_tx_bytes = 0
+
             stations_traffic[station] = {
                 "rx_bytes": curr_rx_bytes,
                 "tx_bytes": curr_tx_bytes

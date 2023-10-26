@@ -1,3 +1,4 @@
+exec sudo mnexec -a 24189 iperf -s -u -p 8 -i 1
 ------------------------------------------------------------
 Server listening on UDP port 8
 UDP buffer size:  208 KByte (default)

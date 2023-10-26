@@ -88,7 +88,7 @@ def topology():
 
     net.plotGraph(min_x=0, max_x=100, min_y=-0, max_y=100)
 
-    # net.setMobilityModel(ac_method='ssf')
+    net.setMobilityModel(ac_method='ssf')
 
     info("*** Starting network\n")
     net.build()
