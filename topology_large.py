@@ -36,7 +36,6 @@ def topology():
     info("*** Creating network\n")
     net = Mininet_wifi(controller = RemoteController,
                        accessPoint=OVSKernelAP,
-                    #    autoAssociation=False, 
                        link=wmediumd, wmediumd_mode=interference)
 
     info("*** Adding 2 APs and controllers\n")
@@ -75,10 +74,7 @@ def topology():
 
     info("*** Creating links\n")
     net.addLink(ap1, ap2)
-    # net.addLink(ap1, ap3)
-    # net.addLink(ap1, ap4)
     net.addLink(ap2, ap3)
-    # net.addLink(ap2, ap4)
     net.addLink(ap3, ap4)
 
     net.addLink(server, ap1, cls=TCLink, bw=20)

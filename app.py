@@ -9,16 +9,12 @@ from ryu.lib.packet import ether_types
 from ryu.lib.packet import ipv4
 from ryu.lib import hub
 
-import os
-import subprocess
+
 import redis
-import threading
-import time
 import pickle
 
 STATION_THRESHOLD = 6
 # STATION_THRESHOLD = 2
-LOAD_THRESHOLD = 10*1000*1000 # 10Mbytes
 SIGNAL_THRESHOLD = -90 # dBm
 
 mappings_path = "mappings.txt"
@@ -114,9 +110,7 @@ class SimpleSwitch13(app_manager.RyuApp):
                     new_ap = next(iter(possible_uaps))
                     print("possible handover", station, new_ap)
                     return station, new_ap
-                    
-                    
-                
+
         return None, None
         
         

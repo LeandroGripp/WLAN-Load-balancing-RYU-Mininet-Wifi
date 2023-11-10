@@ -9,16 +9,10 @@ from ryu.lib.packet import ether_types
 from ryu.lib.packet import ipv4
 from ryu.lib import hub
 
-import os
-import subprocess
+
 import redis
-import threading
-import time
 import pickle
 
-STATION_THRESHOLD = 2
-# STATION_THRESHOLD = 6
-# LOAD_THRESHOLD = 15 # 15Mbps
 LOAD_THRESHOLD = 13 # 13Mbps
 SIGNAL_THRESHOLD = -90 # dBm
 

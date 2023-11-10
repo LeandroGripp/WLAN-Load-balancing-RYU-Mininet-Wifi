@@ -1,21 +1,3 @@
-'''
-AP Agent program
-================
-
-1)Metrics collection:
-- Read the Stations associated with the AP
-Send the Metrics to the  RYU SDN Controller
-
-2) Station handover:
-Receive notification from RYU SDN Controller for forceful movement 
-of station to  new AP and perform it
-
-Interface to RYU SDN Controller - Redis Pub/Sub 
-
-'''
-# Executing Command
-import os
-import json
 import subprocess
 import redis
 import threading
@@ -25,7 +7,7 @@ import pickle
 #APs
 # aps = ['ap1', 'ap2']
 aps = ['ap1', 'ap2', 'ap3', 'ap4']
-# stations = ['sta1', 'sta2', 'sta3', 'sta4', 'sta5', 'sta6', 'sta7', 'sta8']
+
 stations_mapping = {}
 stations_aps = {}
 stations_traffic = {}
@@ -50,7 +32,6 @@ def read_mappings():
 def run_cmd(cmd):
     try:
         output = subprocess.check_output(cmd, stderr=subprocess.STDOUT)
-        #print(cmd, output)
         return output.decode('UTF-8','ignore')
 
     except subprocess.CalledProcessError as ex:
@@ -101,12 +82,6 @@ def get_signal_strengths(output):
 
     return signal_strengths
 
-def get_connected_interface(output):
-    if '-- associated' in output:
-        return 'wlan0'
-    else:
-        return 'wlan1'
-
 def measures_ap_metrics():
     dpid = 1
     report = []    
@@ -116,6 +91,7 @@ def measures_ap_metrics():
         result["dpid"] = dpid
         apifname = ap + "-wlan1"
         result["if_name"] = apifname
+
         #iw dev ap1-wlan1 info
         cmd = ['iw', 'dev', apifname, 'info']
         output = run_cmd(cmd)
@@ -125,6 +101,7 @@ def measures_ap_metrics():
         cmd = ['iw', 'dev', apifname, 'station', 'dump']
         output = run_cmd(cmd)
         stations_associated = get_stations(str(output))
+
         result['stations_associated'] = {}
         for station in stations_associated:
             prev_rx_bytes = stations_traffic.get(station, {}).get("rx_bytes", 0)
@@ -222,9 +199,6 @@ class Listener(threading.Thread):
             self.migrate(data)
 
     def migrate(self, data):
-        #data['station_name'] = "sta1"
-        #data['ssid'] = "ssid_ap2"
-        #data['interface'] = "wlan1"
         #./m sta1 iw dev sta1-wlan0 disconnect
         #./m sta1 iw dev sta1-wlan1 connect ssid-ap2
 
@@ -242,7 +216,6 @@ class Listener(threading.Thread):
 
 if __name__ == '__main__':
     read_mappings()
-    # print(stations_mapping)
 
     for station in stations_mapping:
         station_monitor = StationMetrics(stations_mapping[station])
